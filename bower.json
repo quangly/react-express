@@ -1,0 +1,14 @@
+{
+  "name": "react-express",
+  "description": "ReactJS with Express and NodeJS",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/quangly/react-express",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
