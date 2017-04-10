@@ -14,7 +14,7 @@ gulp.task('live-server', function () {
     server.start();
 });
 
-gulp.task('bundle', function () {
+gulp.task('bundle', ['copy'], function () {
     return browserify({
             entries: 'app/main.jsx',
             debug: true,
@@ -24,6 +24,11 @@ gulp.task('bundle', function () {
         .pipe(source('app.js'))
         .pipe(gulp.dest('./.tmp'));
 });
+
+gulp.task('copy', function(){
+    gulp.src(['app/*.css'])
+    .pipe(gulp.dest('./.tmp'));
+})
 
 gulp.task('serve', ['bundle', 'live-server'], function () {
     browserSync.init(null, {
