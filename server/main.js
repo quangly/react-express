@@ -1,6 +1,9 @@
 var express = require('express');
 var parser = require('body-parser');
 
+
+require('./database.js');
+
 var app = new express();
 //app.use(parser.json());
 //app.use(parser.urlencoded({
