@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-//var GroceryItem = require('./models/GroceryItem.js');
+var GroceryItem = require('./models/GroceryItem.js');
 
 mongoose.connect('mongodb://localhost/grocery',function(){
     console.log("connected.");
@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost/grocery',function(){
         name:"Snarks"
     }];
     
-//    items.forEach(function(item){
-//        new GroceryItem(item).save();
-//    })
+    items.forEach(function(item){
+        new GroceryItem(item).save();
+    })
 })
